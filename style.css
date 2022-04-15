@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Press+Start+2P&display=swap');
+
+@keyframes enter {
+	0% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes bg-scroll {
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: 750px 750px;
+	}
+}
+
+@keyframes triggered {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	10% {
+		transform: translate(10px, 0px);
+	}
+	20% {
+		transform: translate(0px, 10px);
+	}
+	30% {
+		transform: translate(-10px, -10px);
+	}
+	40% {
+		transform: translate(-10px, 10px);
+	}
+	50% {
+		transform: translate(0px, -10px);
+	}
+	60% {
+		transform: translate(0px, 0px);
+	}
+	70% {
+		transform: translate(10px, 10px);
+	}
+	80% {
+		transform: translate(-10px, -10px);
+	}
+	90% {
+		transform: translate(0px, 10px);
+	}
+	100% {
+		transform: translate(10px, 0px);
+	}
+}
+
+@keyframes beat {
+	0% {
+		transform: scale(1, 1);
+	}
+	50% {
+		transform: scale(0.75, 0.75);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+	background: #EEEEEE;
+}
+
+::-webkit-scrollbar-track {
+	background: #777777;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #FFFFFF;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	font-family: "Outfit";
+	color: #FFFFFF;
+	user-select: none;
+	cursor: default;
+}
+
+.background {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 150%;
+	height: 150%;
+	z-index: -1;
+	transform: translate(-50%, -50%);
+	background-image: url("Tullax.png");
+	background-size: 64px;
+	filter: blur(5px) brightness(0.5);
+	animation: bg-scroll 30s infinite linear, enter 7s;
+	background-repeat: repeat;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+	animation: enter 7s;
+}
+
+center {
+	width: inherit;
+	height: inherit;
+}
+
+h1 {
+	font-size: 250%;
+	margin-bottom: 20px;
+}
+
+p {
+	width: 75%;
+	font-size: 150%;
+}
+
+.banner {
+	font-size: 150%;
+}
+
+.banner img {
+	height: 40%;
+	width: auto;
+	margin: 5%;
+	border-radius: 10px;
+}
+
+.gap {
+	position: relative;
+	margin-bottom: 15%;
+}
+
+.navbar {
+	margin: 0;
+	padding: 1%;
+}
+
+button {
+	padding: 10px;
+	margin: 1%;
+	border: 5px solid #FFFFFF;
+	font-size: 100%;
+	border-radius: 20px;
+	cursor: pointer;
+	background: #FFFFFF00;
+	animation: beat 2.5s infinite linear;
+}
+
+button:hover {
+	background: #FFFFFF77;
+	animation: triggered 0.5s infinite linear;
+}
+
+.navbar i {
+	cursor: pointer;
+	font-size: 150%;
+}
+
+.loading {
+	text-align: center;
+	font-size: 150%;
+	opacity: 1;
+	z-index: -5;
+	color: #000000;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Outfit";
+}
+
+.loading i {
+	color: #000000;
+}
+
