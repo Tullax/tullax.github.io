@@ -159,6 +159,7 @@ button {
 	cursor: pointer;
 	background: #FFFFFF00;
 	animation: beat 2.5s infinite linear;
+	text-align: center;
 }
 
 button:hover {
